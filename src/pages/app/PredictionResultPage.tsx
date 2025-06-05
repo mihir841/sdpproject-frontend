@@ -33,7 +33,8 @@ const PredictionResultPage = () => {
         
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 1000));
-        const res = await axios.get('http://localhost:5000/api/scans/'+id,{
+        // const res = await axios.get('http://localhost:5000/api/scans/'+id,{
+        const res = await axios.get('https://sdpproject-backend.onrender.com/api/scans/'+id,{
           headers: {
             Authorization: `Bearer ${token}`
           }

@@ -60,7 +60,8 @@ const UploadScanPage = () => {
       formData.append('file', selectedFile);
       formData.append('filePath',previewUrl)
       const token = localStorage.getItem("token");
-      const response = await axios.post('http://localhost:5000/api/upload', 
+      // const response = await axios.post('http://localhost:5000/api/upload', 
+      const response = await axios.post('https://sdpproject-backend.onrender.com/api/upload', 
         formData ,{
         headers: { Authorization: `Bearer ${token}` }
       });

@@ -32,7 +32,8 @@ const ReportsPage = () => {
         const token = localStorage.getItem("token");
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 1000));
-        const res = await axios.get('http://localhost:5000/api/scans',{
+        // const res = await axios.get('http://localhost:5000/api/scans',{
+        const res = await axios.get('https://sdpproject-backend.onrender.com/api/scans',{
           headers: {
             Authorization: `Bearer ${token}`
           }
